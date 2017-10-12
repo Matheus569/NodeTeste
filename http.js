@@ -1,6 +1,8 @@
 var router = require ('./router');
 
-var app = router(3000);
+var port = process.env.PORT || 8080;
+
+var app = router(port);
 
 var contatos = [
 	{nome: "Pedro", telefone: "9999-8888", data : new Date(), operadora : {nome: "Oi", codigo : 14, categoria : "Celular"} ,cor : "blue" },
